@@ -186,20 +186,20 @@ hr
     margin-top: 150px;
     */
     
-    /*
+    
     width: 100%;
     clear: both !important;
-    position: absolute;
-    bottom:0; left:0;
+    
+    /*bottom:0; left:0;*/
     display: block;
     float: none;
-    background:#F00;
+    /*background:#F00;*/
     position: absolute;
-    */
+    
 	
     right: 0;
-    bottom: 0;
-    left: 0;
+    bottom: 1;
+    left: 0;	
     padding: 1rem;
     background-color: #efefef;
     text-align: center;	
