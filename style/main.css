@@ -184,19 +184,16 @@ hr
     color:#000000;
     font-size: 12px;
     margin-top: 150px;
-    */
+    
     
     
     width: 100%;
     clear: both !important;
     
-    /*bottom:0; left:0;*/
     display: block;
     float: none;
-    /*background:#F00;*/
+    */
     position: absolute;
-    
-	
     right: 0;
     bottom: 1;
     left: 0;	
