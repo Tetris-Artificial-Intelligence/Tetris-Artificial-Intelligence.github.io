@@ -1,7 +1,12 @@
 function GameManager(){
     this.gridCanvas = document.getElementById('grid-canvas');
     this.nextCanvas = document.getElementById('next-canvas');
-    this.scoreContainer = document.getElementById("score-container");
+    this.scoreContainer = document.getElementById('score-container');
+	
+	this.height = document.getElementById('height-container');
+	this.holesContainer = document.getElementById('holes-container');
+	this.bumpiness = document.getElementById('bumpiness-container');
+	
     this.resetButton = document.getElementById('reset-button');
     this.aiButton = document.getElementById('ai-button');
 

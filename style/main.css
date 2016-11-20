@@ -127,6 +127,52 @@ hr
     font-weight: normal;
 }
 
+.height-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #FF0000;
+    font-size:25px;
+    border:1px solid #CCCCCC;
+    font-weight: bold;
+    padding:5px;
+    margin-top: 10px;
+}
+
+.height-container::before
+{
+    content: "Agreggate Height";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+.bumpiness-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #FF0000;
+    font-size:25px;
+    border:1px solid #CCCCCC;
+    font-weight: bold;
+    padding:5px;
+    margin-top: 10px;
+}
+
+.bumpiness-container::before
+{
+    content: "Bumpiness";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
 .start-ai-button, .reset-button {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;

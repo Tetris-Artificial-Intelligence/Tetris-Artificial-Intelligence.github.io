@@ -43,5 +43,6 @@ AI.prototype.best = function(grid, workingPieces, workingPieceIndex){
         }
     }
 
+	<!--return {piece:best, score:bestScore};-->
     return {piece:best, score:bestScore};
 };
