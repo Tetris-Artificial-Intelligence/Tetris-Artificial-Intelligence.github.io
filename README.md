@@ -1,7 +1,8 @@
 # Tetris Artificial Intelligence
 
 This project is based on Tetris game with an AI algotithm that looks for pattersn in which lines can be cleard.
-To see the game live [click here](https://tetris-artificial-intelligence.github.io)
+
+*To see the game live [click here](https://tetris-artificial-intelligence.github.io)*
 
 
 **Game Goal**
