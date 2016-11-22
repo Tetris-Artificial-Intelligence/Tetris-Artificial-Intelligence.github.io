@@ -3,6 +3,7 @@
 This project is based on Tetris game with an AI algotithm that looks for pattersn in which lines can be cleard.
 
 **Game Goal**
+
 goal is to clear as many lines as possible, and therefore, to make as many moves as possible.
 
 To meet this goal, our AI will decide the best move for a given Tetris piece by trying out all the possible moves (rotation and position). It computes a score for each possible move (together with the lookahead piece), and selects the one with the best score as its next move.
