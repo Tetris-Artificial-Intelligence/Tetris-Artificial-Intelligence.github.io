@@ -1,6 +1,8 @@
 # Tetris Artificial Intelligence
 
 This project is based on Tetris game with an AI algotithm that looks for pattersn in which lines can be cleard.
+To see the game live [click here](https://tetris-artificial-intelligence.github.io)
+
 
 **Game Goal**
 
@@ -10,23 +12,28 @@ To meet this goal, our AI will decide the best move for a given Tetris piece by 
 
 The score for each move is computed by assessing the grid the move would result in. This assessment is based on four heuristics: aggregate height, complete lines, holes, and bumpiness, each of which the AI will try to either minimize or maximize.
 
+
 **Completed Lines**
 
 This is probably the most intuitive heuristic among the four. It is simply the the number of complete lines in a grid. We’ll want to maximize the number of complete lines, because clearing lines is the goal of the AI, and clearing lines will give us more space for more pieces.
+![Completed Lines](/images/complete_lines.png)
 
-**Agregate Heigt**
+**Agregate Heigth**
 
 This heuristic tells us how “high” a grid is. To compute the aggregate height, we take the sum of the height of each column (the distance from the highest tile in each column to the bottom of the grid). We’ll want to minimize this value, because a lower aggregate height means that we can drop more pieces into the grid before hitting the top of the grid.
+![Aggregate Height](/images/agregate_height.png)
 
 **Bumpiness**
 
  Consider a case where we get a deep “well” in our grid that makes it undesirable: The presence of these wells indicate that lines that can be cleared easily are not cleared. If a well were to be covered, all the rows which the well spans will be hard to clear. To generalize the idea of a “well”, we define a heuristic which I shall name “bumpiness”.
 
 The bumpiness of a grid tells us the variation of its column heights. It is computed by summing up the absolute differences between all two adjacent columns.
+![Bumpiness 1](/images/bumpiness1.png) ![Bumpiness 2](/images/bumpiness2.png)
 
 **Holes**
 
 A hole is defined as an empty space such that there is at least one tile in the same column above it. A hole is harder to clear, because we’ll have to clear all the lines above it before we can reach the hole and fill it up. So we’ll have to minimize these holes.
+![Number Holes](/images/number_holes.png)
 
 **Conclusion**
 
