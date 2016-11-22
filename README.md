@@ -20,11 +20,15 @@ This is probably the most intuitive heuristic among the four. It is simply the t
 
 ![Completed Lines](/images/complete_lines.png)
 
+- - - -
+
 **Agregate Heigth**
 
 This heuristic tells us how “high” a grid is. To compute the aggregate height, we take the sum of the height of each column (the distance from the highest tile in each column to the bottom of the grid). We’ll want to minimize this value, because a lower aggregate height means that we can drop more pieces into the grid before hitting the top of the grid.
 
-![Aggregate Height](/images/agregate_height.png)
+![Aggregate Height](/images/aggregate_height.png)
+
+- - - -
 
 **Bumpiness**
 
@@ -34,11 +38,15 @@ The bumpiness of a grid tells us the variation of its column heights. It is comp
 
 ![Bumpiness 1](/images/bumpiness1.png) ![Bumpiness 2](/images/bumpiness2.png)
 
+- - - -
+
 **Holes**
 
 A hole is defined as an empty space such that there is at least one tile in the same column above it. A hole is harder to clear, because we’ll have to clear all the lines above it before we can reach the hole and fill it up. So we’ll have to minimize these holes.
 
 ![Number Holes](/images/number_holes.png)
+
+- - - -
 
 **Conclusion**
 
