@@ -1,6 +1,6 @@
 function Updater(){
     this.lastUpdateTime = Date.now();
-    this.deltaThreshold = 500;
+    this.deltaThreshold = 5000;
     this.updateCallback = null;
     this.skipping = false;
 
@@ -12,7 +12,7 @@ function Updater(){
             window.oRequestAnimationFrame      ||
             window.msRequestAnimationFrame     ||
             function(callback){
-                window.setTimeout(callback, 1000 / 60);
+                window.setTimeout(callback, 1000/ 60);
             }
             );
     }();
@@ -23,6 +23,7 @@ Updater.prototype.onUpdate = function(callback){
 };
 
 Updater.prototype.doUpdate = function(timestamp){
+    //console.log("Updating", this.skipping);
     if(this.updateCallback != null){
         this.updateCallback();
     }

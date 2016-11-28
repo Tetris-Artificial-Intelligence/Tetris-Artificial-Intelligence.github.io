@@ -26,6 +26,15 @@ hr
     width:350px;
     margin: 0 auto;
 }
+.chart
+{
+    width:30%;
+    height:100px;
+    margin: 0 auto;
+    position: fixed;
+    right:10px;
+    top:10px;
+}
 
 .header
 {
@@ -36,7 +45,7 @@ hr
 
 .game-container
 {
-    height:400px;
+    height:450px;
     margin-top:10px;
 }
 
@@ -59,6 +68,28 @@ hr
     height:100%;
 }
 
+.input-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    color: #FF0000;
+    border:1px solid #CCCCCC;
+    font-weight: bold;
+    width:130px;
+    margin-bottom: 5px;
+}
+
+.options-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    font-size:10px;
+    color: gray;
+    font-weight: bold;
+}
+
 .score-container
 {
     background-color: #FFFFFF;
@@ -73,7 +104,7 @@ hr
 
 .score-container::before
 {
-    content: "Completed Lines";
+    content: "Lines Cleared";
     width:100%;
     float:right;
     color: #BBBBBB;
@@ -97,75 +128,6 @@ hr
 .next-container::before
 {
     content: "Next Piece";
-    width:100%;
-    float:right;
-    color: #BBBBBB;
-    font-size:15px;
-    font-weight: normal;
-}
-
-.holes-container
-{
-    background-color: #FFFFFF;
-    box-shadow: 0 0 10px 2px #EEEEEE;
-    text-align: center;
-    color: #FF0000;
-    font-size:25px;
-    border:1px solid #CCCCCC;
-    font-weight: bold;
-    padding:5px;
-    margin-top: 10px;
-}
-
-.holes-container::before
-{
-    content: "Holes";
-    width:100%;
-    float:right;
-    color: #BBBBBB;
-    font-size:15px;
-    font-weight: normal;
-}
-
-.height-container
-{
-    background-color: #FFFFFF;
-    box-shadow: 0 0 10px 2px #EEEEEE;
-    text-align: center;
-    color: #FF0000;
-    font-size:25px;
-    border:1px solid #CCCCCC;
-    font-weight: bold;
-    padding:5px;
-    margin-top: 10px;
-}
-
-.height-container::before
-{
-    content: "Agreggate Height";
-    width:100%;
-    float:right;
-    color: #BBBBBB;
-    font-size:15px;
-    font-weight: normal;
-}
-
-.bumpiness-container
-{
-    background-color: #FFFFFF;
-    box-shadow: 0 0 10px 2px #EEEEEE;
-    text-align: center;
-    color: #FF0000;
-    font-size:25px;
-    border:1px solid #CCCCCC;
-    font-weight: bold;
-    padding:5px;
-    margin-top: 10px;
-}
-
-.bumpiness-container::before
-{
-    content: "Bumpiness";
     width:100%;
     float:right;
     color: #BBBBBB;
@@ -225,28 +187,9 @@ hr
 
 .footer
 {
-    /*
     font-family: Verdana;
     color:#000000;
     font-size: 12px;
-    margin-top: 150px;
-    
-    
-    */
-    width: 100%;
-    clear: both !important;
-    
-    display: block;
-    float: none;
-    
-    margin-top: 150px;
-    position: absolute;
-    right: 0;
-    bottom: 1;
-    left: 0;	
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;	
 }
 
 .fb-like {

@@ -1,12 +1,7 @@
 function GameManager(){
     this.gridCanvas = document.getElementById('grid-canvas');
     this.nextCanvas = document.getElementById('next-canvas');
-    this.scoreContainer = document.getElementById('score-container');
-	
-	this.height = document.getElementById('height-container');
-	this.holesContainer = document.getElementById('holes-container');
-	this.bumpiness = document.getElementById('bumpiness-container');
-	
+    this.scoreContainer = document.getElementById("score-container");
     this.resetButton = document.getElementById('reset-button');
     this.aiButton = document.getElementById('ai-button');
 
@@ -60,12 +55,20 @@ function GameManager(){
 GameManager.prototype.setup = function(){
     this.grid = new Grid(22, 10);
     this.rpg = new RandomPieceGenerator();
-    this.ai = new AI(0.510066, 0.760666, 0.35663, 0.184483);
+    //this.ai = new AI(0.510066, 0.760666, 0.35663, 0.184483);
+    var gah = parseFloat(document.getElementById('g-ah').value);
+    var gcl = parseFloat(document.getElementById('g-cl').value);
+    var gh = parseFloat(document.getElementById('g-h').value);
+    var gb = parseFloat(document.getElementById('g-b').value);
+    console.log(gah, gcl, gh, gb);
+
+    this.ai = new AI(gah, gcl, gh, gb);
     this.workingPieces = [this.rpg.nextPiece(), this.rpg.nextPiece()];
     this.workingPiece = this.workingPieces[0];
 
     this.isOver = true;
     this.score = 0;
+    this.lastScore = 0;
 
     this.stopAI();
     this.actuate();
@@ -127,7 +130,9 @@ GameManager.prototype.stopAI = function(){
 
 GameManager.prototype.setWorkingPiece = function(){
     this.grid.addPiece(this.workingPiece);
+    this.lastScore = this.score;
     this.score += this.grid.clearLines();
+
     if (!this.grid.exceeded()){
         for(var i = 0; i < this.workingPieces.length - 1; i++){
             this.workingPieces[i] = this.workingPieces[i + 1];
@@ -181,6 +186,8 @@ GameManager.prototype.rotate = function(){
 
 GameManager.prototype.aiMove = function(){
     this.workingPiece = this.ai.best(this.grid, this.workingPieces, 0).piece;
+    a.insertValue(this.grid.aggregateHeight());
+    b.insertValue(this.score - this.lastScore);
+    c.insertValue(this.grid.holes());
+    d.insertValue(this.grid.bumpiness());
 };
-
-

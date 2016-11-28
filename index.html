@@ -2,61 +2,67 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Tetris Artificial Intelligence</title>
+    <title>Tetris AI</title>
     <link href="style/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="fb-root"></div>
 <div class="container">
-    <h3 class="header">Tetris Artificial Intelligence</h3>
+    <h1 class="header">Tetris AI</h1>
 
     <div class="game-container">
         <canvas width="200px" height="400px" id="grid-canvas" class="grid"></canvas>
         <div class="controls-container">
-            <div id="score-container" class="score-container">0</div> 
-            <div id="height-container" class="height-container">0</div> 
-            <div id="holes-container" class="holes-container">0</div>
-            <div id="bumpiness-container" class="bumpiness-container">0</div>
-            
+            <div id="score-container" class="score-container">0</div>
             <div id="next-container" class="next-container">
-                <canvas id="next-canvas" class="next-canvas" width="80px" height="95px"></canvas>
+                <canvas id="next-canvas" class="next-canvas" width="80px" height="80px"></canvas>
             </div>
-            
-            
-            
-        </div>
-            <a id="ai-button" class="start-ai-button">Activate AI Algorithm</a>
+            <a id="ai-button" class="start-ai-button">Run AI</a>
             <a id="reset-button" class="reset-button">Reset</a>
+            <div class="options-container">
+              Aggregate Height
+              <input id="g-ah" type="text" class="input-container" value="1"/>
+              Complete Lines
+              <input id="g-cl" type="text" class="input-container" value="1"/>
+              Holes
+              <input id="g-h" type="text" class="input-container" value="1"/>
+              Bumpiness
+              <input id="g-b" type="text" class="input-container" value="1"/>
+
+            </div>
+        </div>
     </div>
     <hr>
-    <!--
     <div class="footer">
-        <p>Created by <a href="http://codemyroad.wordpress.com" target="#">Lee Yiyuan</a>. <br>Implemented by<br> Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio. <br>To read about the AI, <a href="https://github.com/Tetris-Artificial-Intelligence/Tetris-Artificial-Intelligence.github.io" target="#">Click here</a></p>
+        <p>Created by <a href="http://codemyroad.wordpress.com" target="#">Lee Yiyuan</a>. Reanalyzed by Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio. To read about the AI, <a href="https://github.com/Tetris-Artificial-Intelligence/Tetris-Artificial-Intelligence.github.io" target="#">Click here</a></p>
 
        <a href="https://twitter.com/share" class="twitter-share-button" data-url="leeyiyuan.github.io/tetrisai" data-via="LeeYiyuan">Tweet</a>
         <div class="fb-like" data-href="http://leeyiyuan.github.io/tetrisai" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
     </div>
-    -->
+
 </div>
 
+<div id="chartContainer" class="chart" style="top:80px;"></div>
+<div id="chartContainer1" class="chart" style="top:190px;"></div>
+<div id="chartContainer2" class="chart" style="top:300px;"></div>
+<div id="chartContainer3" class="chart" style="top:410px;"></div>
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script src="js/canvasjs.min.js"></script>
+<script src="js/chart.js"></script>
 <script src="js/grid.js"></script>
 <script src="js/piece.js"></script>
 <script src="js/game_manager.js"></script>
 <script src="js/random_piece_generator.js"></script>
 <script src="js/ai.js"></script>
 <script src="js/updater.js"></script>
+<!--<a id="reset-button" class="reset-button" onclick="c.insertValue(100)">Insert</a>-->
 <script>
     var manager = new GameManager();
     manager.actuate(manager.grid, manager.workingPiece);
 </script>
 
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=142725279075499&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 </body>
 </html>
