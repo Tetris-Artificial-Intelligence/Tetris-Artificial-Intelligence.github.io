@@ -12,40 +12,60 @@
 
     <div class="game-container">
         <canvas width="200px" height="400px" id="grid-canvas" class="grid"></canvas>
-        <div class="controls-container">
+        
+       <div class="controls-container">
             <div id="score-container" class="score-container">0</div>
+           
             <div id="next-container" class="next-container">
-                <canvas id="next-canvas" class="next-canvas" width="80px" height="80px"></canvas>
+                <canvas id="next-canvas" class="next-canvas" width="280px" height="80px"></canvas>
             </div>
-            <a id="ai-button" class="start-ai-button">Run AI</a>
-            <a id="reset-button" class="reset-button">Reset</a>
-            <div class="options-container">
-              Aggregate Height
+            
+              <!--<div class="options-container">-->
+              
+              
+              <div class="ah-container">
+              <!--Aggregate Height-->
               <input id="g-ah" type="text" class="input-container" value="1"/>
-              Complete Lines
+              </div>
+              
+              <div class="cl-container">
+              <!--Complete Lines-->
               <input id="g-cl" type="text" class="input-container" value="1"/>
-              Holes
+              </div>
+              
+              
+              <div class="h-container">
+             <!-- Holes -->
               <input id="g-h" type="text" class="input-container" value="1"/>
-              Bumpiness
+              </div>
+              
+              
+              <div class="b-container">
+              <!-- Bumpiness -->
               <input id="g-b" type="text" class="input-container" value="1"/>
-
-            </div>
-        </div>
+              </div>
+            
+          </div>
+            
+        
     </div>
+    <a id="ai-button" class="start-ai-button">Run AI</a>
+           <a id="reset-button" class="reset-button">Reset</a>
+    
     <hr>
     <div class="footer">
-        <p>Created by <a href="http://codemyroad.wordpress.com" target="#">Lee Yiyuan</a>. Reanalyzed by Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio. To read about the AI, <a href="https://github.com/Tetris-Artificial-Intelligence/Tetris-Artificial-Intelligence.github.io" target="#">Click here</a></p>
-
-       <a href="https://twitter.com/share" class="twitter-share-button" data-url="leeyiyuan.github.io/tetrisai" data-via="LeeYiyuan">Tweet</a>
-        <div class="fb-like" data-href="http://leeyiyuan.github.io/tetrisai" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+        <p>Original work by Lee Yiyuan. Reanalyzed and implemented by Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio. About the AI, <a href="https://github.com/Tetris-Artificial-Intelligence/Tetris-Artificial-Intelligence.github.io" target="#">Click here</a></p>
     </div>
 
-</div>
+
 
 <div id="chartContainer" class="chart" style="top:80px;"></div>
 <div id="chartContainer1" class="chart" style="top:190px;"></div>
 <div id="chartContainer2" class="chart" style="top:300px;"></div>
 <div id="chartContainer3" class="chart" style="top:410px;"></div>
+
+</div>
+
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 

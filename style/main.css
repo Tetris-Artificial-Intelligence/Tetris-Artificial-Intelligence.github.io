@@ -80,7 +80,18 @@ hr
     margin-bottom: 5px;
 }
 
-.options-container
+.input-container::before
+{
+    content: "Lines Cleared";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+
+.ah-container
 {
     background-color: #FFFFFF;
     box-shadow: 0 0 10px 2px #EEEEEE;
@@ -89,6 +100,80 @@ hr
     color: gray;
     font-weight: bold;
 }
+
+.ah-container::before
+{
+    content: "Agreggate Height";
+    width:100%;
+	height:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+
+.cl-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    font-size:10px;
+    color: gray;
+    font-weight: bold;
+}
+
+.cl-container::before
+{
+    content: "Clear Lines";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+.h-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    font-size:10px;
+    color: gray;
+    font-weight: bold;
+}
+
+.h-container::before
+{
+    content: "Holes";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
+
+.b-container
+{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 2px #EEEEEE;
+    text-align: center;
+    font-size:10px;
+    color: gray;
+    font-weight: bold;
+}
+
+.b-container::before
+{
+    content: "Bumpiness";
+    width:100%;
+    float:right;
+    color: #BBBBBB;
+    font-size:15px;
+    font-weight: normal;
+}
+
 
 .score-container
 {
