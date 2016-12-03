@@ -61,5 +61,5 @@ For example, using a naive random piece generator instead may result in an obsce
 
 As such, when comparing between the results of different Tetris AIs, much attention should be placed on the set of rules used for a fair comparison to be made.
 
-Original work by Lee Yiyuan. Reanalyzed and implemented by Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio
+## Original work by Lee Yiyuan. Reanalyzed and implemented by Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio
 
