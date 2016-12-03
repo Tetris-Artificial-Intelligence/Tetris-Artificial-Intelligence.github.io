@@ -1,4 +1,4 @@
-# Tetris Artificial Intelligence 
+# Tetris AI
 # [PLAY TETRIS AI](https://tetris-artificial-intelligence.github.io)
 
 This project is based on Tetris game with an AI algotithm that looks for pattersn in which lines can be cleard.
@@ -60,4 +60,6 @@ I would also like to stress that this AI was tuned for a specific set of rules (
 For example, using a naive random piece generator instead may result in an obscenely long sequence of “S” or “Z” tiles which will increase the difficulty of the AI. Allowing more lookaheads will also allow the AI to make more complex moves, in which case it will probably perform better (if properly tuned).
 
 As such, when comparing between the results of different Tetris AIs, much attention should be placed on the set of rules used for a fair comparison to be made.
+
+Original work by Lee Yiyuan. Reanalyzed and implemented by Isaac Lino, Angel Gonzales, Kevin Ortega and Marco Rubio
 
