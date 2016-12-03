@@ -1,5 +1,4 @@
-# Tetris AI
-# [PLAY TETRIS AI](https://tetris-artificial-intelligence.github.io)
+# Tetris AI | [PLAY](https://tetris-artificial-intelligence.github.io)
 
 This project is based on Tetris game with an AI algotithm that looks for pattersn in which lines can be cleard.
 
